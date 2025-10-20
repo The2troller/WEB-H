@@ -1,8 +1,13 @@
 
 body {
     background-color: white;
-    color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
+
+
 
 body.dark-mode { 
     background-color: black;
@@ -15,7 +20,9 @@ h1.titulo {
     font-family: sans-serif;
     text-align: center;
     margin: 0;
+
 }
+
 
 h2.subtitulo {
     font-size: 20px;
@@ -26,16 +33,72 @@ h2.subtitulo {
 }
 
 h3.subtitulo {
+    background-color: white;
+    border-radius: 5px;
+    color:black;
     font-size: 20px;
     font-weight: bold;  
     font-family: sans-serif;
+    width: 100%;
+    justify-content: center;
     text-align: center;
-    margin-top: 100px;
-    
+    margin: 0;
 }
+body.dark-mode h3.subtitulo {
+    background-color: black;
+    color:white;
+}
+
 
 .bloque-titulo {
     margin-top: 20px;
     margin-bottom: 20px;
-
 }
+
+.banner {
+    background-image: url('.vscode/fotopato.png');
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(75%);
+    position: relative;
+}
+
+
+.carta {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;    
+}
+
+body.dark-mode .carta {
+    background-color: black;
+    color: white;
+}
+
+
+.carta-icono {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.carta-contenedor {
+    display: flex;
+    margin: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: horizontal;
+}
+
+
