@@ -23,23 +23,26 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
 
-const mail = Document.getElementById("mail-register").value
-const password = Document.getElementById("password-register").value
-const btn_register = Document.getElementById("btn-register")
+const create_mail = document.getElementById("mail-register");
+const create_password = document.getElementById("password-register");
+const btn_register = document.getElementById("btn-register");
 
-if (btn_register) {
-  btn_register.addEventListener('click', (e) => {
-    e.preventDefault();
 
-    auth.createUserWithEmailAndPassword(mail, password)
-      .then((userCredential) => {
-        console.log("Usuario creado:", userCredential.user);
-        alert("¡Cuenta creada con éxito!");
-      })
-      .catch((error) => {
-        console.error("Error al registrar:", error.message);
-        alert("Error: " + error.message);
-      });
-  });
-}
+btn_register.addEventListener('click', (e) => {
+  e.preventDefault();
+  const mail = create_mail.value;
+  const password = create_password.value;
+
+  createUserWithEmailAndPassword(auth, mail, password)
+    .then((userCredential) => {
+      console.log("Usuario creado:", userCredential.user);
+      alert("¡Cuenta creada con éxito!");
+      window.location.href = "index.html";
+    })
+    .catch((error) => {
+      console.error("Error al registrar:", error.message);
+      alert("Error: " + error.message);
+    });
+});
+
 
