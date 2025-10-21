@@ -57,6 +57,12 @@ onAuthStateChanged(auth, (user) => {
       const email_displayed = document.getElementById("display-mail");
       email_displayed.textContent = user.email;
     }
+    if (window.location.pathname.includes("profile.html")) {
+      const email_displayed = document.getElementById("display-email");
+      if (email_displayed) {
+        email_displayed.textContent = user.email;
+      }
+    }
 
   } else {
 
