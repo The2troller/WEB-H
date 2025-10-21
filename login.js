@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,24 +23,24 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
 
-const create_mail = document.getElementById("mail-register");
-const create_password = document.getElementById("password-register");
-const btn_register = document.getElementById("btn-register");
+const login_mail = document.getElementById("mail-login");
+const login_password = document.getElementById("password-login");
+const btn_login = document.getElementById("btn-login");
 
 
-btn_register.addEventListener("click", (e) => {
+btn_login.addEventListener("click", (e) => {
   e.preventDefault();
-  const mail = create_mail.value;
-  const password = create_password.value;
+  const mail = login_mail.value;
+  const password = login_password.value;
 
-  createUserWithEmailAndPassword(auth, mail, password)
+  signInWithEmailAndPassword(auth, mail, password)
     .then((userCredential) => {
-      console.log("Usuario creado:", userCredential.user);
-      alert("¡Cuenta creada con éxito!");
+      console.log("Ingreso exitoso:", userCredential.user);
+      alert("¡Ingreso a la cuenta exitoso!");
       window.location.href = "index.html";
     })
     .catch((error) => {
-      console.error("Error al registrar:", error.message);
+      console.error("Error al ingresar:", error.message);
       alert("Error: " + error.message);
     });
 });
