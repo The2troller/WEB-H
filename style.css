@@ -278,6 +278,8 @@ img, video {
     padding: 12px;
     font-size: 1rem;
     width: 100%;
+    background-color: white;
+    color: black;;
 }
 
 .login-box a {
@@ -290,3 +292,16 @@ img, video {
     margin: 20px auto;
     padding: 10px 20px;
 }
+
+body.dark-mode .login-box{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+body.dark-mode .login-box input {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
