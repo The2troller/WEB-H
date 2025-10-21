@@ -68,7 +68,7 @@ onAuthStateChanged(auth, (user) => {
 
     console.log("No hay sesión activa.");
 
-    if (window.location.pathname.includes("Fotos.html") || window.location.pathname.includes("Contacto.html") || window.location.pathname.includes("index.html")) {
+    if (window.location.pathname.includes("Fotos.html") || window.location.pathname.includes("contacto.html") || window.location.pathname.includes("index.html") || window.location.pathname.includes("profile.html")) {
       window.location.href = "login.html";
     }
   }
@@ -81,9 +81,11 @@ if (btn_logout) {
     signOut(auth)
     .then(() => {
       console.log("Sesión cerrada");
+      alert("Sesion cerrada con exito");
     })
     .catch((error) => {
       console.error("Error al cerrar sesión:", error);
+      alert("Error al cerrar sesion")
     });
   });
 }
