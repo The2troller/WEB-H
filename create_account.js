@@ -44,5 +44,3 @@ btn_register.addEventListener('click', (e) => {
       alert("Error: " + error.message);
     });
 });
-
-
