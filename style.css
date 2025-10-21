@@ -154,6 +154,20 @@ body.dark-mode .nav-links a {
     color:white;
 }
 
+.cont {
+    background-image: url('.vscode/fotopatocontacto1.jpg');
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(75%);
+    position: relative;
+}
+
 
 
 
