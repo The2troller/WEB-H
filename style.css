@@ -258,3 +258,35 @@ img, video {
     height: auto;
     display: block;
 }
+
+.login-box {
+    max-width: 400px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 2rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.login-box input {
+    padding: 12px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.login-box a {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#modo-boton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
