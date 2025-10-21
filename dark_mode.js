@@ -13,4 +13,3 @@ boton.addEventListener('click', () =>  {
 });
 
 
-const register_mail = Document.getElementById("mail-register")
