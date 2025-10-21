@@ -8,7 +8,7 @@
 
 body {
     background-color: white;
-    color: white;
+    color: black;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -154,6 +154,7 @@ body.dark-mode .nav-links a {
     color:white;
 }
 
+<<<<<<< HEAD
 .cont {
     background-image: url('.vscode/fotopatocontacto1.jpg');
     width: 100%;
@@ -169,6 +170,13 @@ body.dark-mode .nav-links a {
 }
 
 
+=======
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+>>>>>>> 520c13ad2e1b196d9ee2cb7b07f69c0770db5654
 
 
 
