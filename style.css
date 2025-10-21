@@ -8,7 +8,7 @@
 
 body {
     background-color: white;
-    color: white;
+    color: black;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -154,7 +154,11 @@ body.dark-mode .nav-links a {
     color:white;
 }
 
-
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 

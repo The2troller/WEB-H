@@ -11,3 +11,6 @@ boton.addEventListener('click', () =>  {
         boton.textContent = 'Activar Modo Oscuro';
     }
 });
+
+
+const register_mail = Document.getElementById("mail-register")
