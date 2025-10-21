@@ -68,7 +68,7 @@ onAuthStateChanged(auth, (user) => {
 
     console.log("No hay sesión activa.");
 
-    if (window.location.pathname.includes("profile.html")) {
+    if (window.location.pathname.includes("Fotos.html") || window.location.pathname.includes("Contacto.html") || window.location.pathname.includes("index.html")) {
       window.location.href = "login.html";
     }
   }
