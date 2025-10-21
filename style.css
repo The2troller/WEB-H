@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    line-height: 1,6;
+    line-height: 1.6;
 }
 
 
@@ -23,7 +23,7 @@ body.dark-mode {
 }
 
 h1.titulo {
-    font-size: 60px;
+    font-size: clamp(28px, 6vw, 60px);
     font-weight: bold;  
     font-family: sans-serif;
     text-align: center;
@@ -33,7 +33,7 @@ h1.titulo {
 
 
 h2.subtitulo {
-    font-size: 20px;
+    font-size: clamp(16px,2.8vw,20px);
     font-weight: bold;  
     font-family: sans-serif;
     text-align: center;
@@ -44,7 +44,7 @@ h3.subtitulo {
     background-color: white;
     border-radius: 5px;
     color:black;
-    font-size: 20px;
+    font-size: clamp(12px,2.2vw,16px);;
     font-weight: bold;  
     font-family: sans-serif;
     width: 100%;
@@ -67,7 +67,7 @@ body.dark-mode h3.subtitulo {
     background-image: url('.vscode/fotopato.png');
     width: 100%;
     background-size: cover;
-    height: 100vh;
+    min-height: 100dvh;
     background-position: center;
     display: flex;
     flex-direction: column;
@@ -75,6 +75,8 @@ body.dark-mode h3.subtitulo {
     justify-content: center;
     filter: brightness(75%);
     position: relative;
+    text-align: center;
+    padding: 16px;
 }
 
 
@@ -97,20 +99,18 @@ body.dark-mode .carta {
 
 
 .carta-icono {
-    font-size: 50px;
+    font-size: clamp(25px,5vw,50px);
     margin-bottom: 10px;
 }
 
 .carta-contenedor {
-    display: flex;
-    margin: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: horizontal;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 header {
-    box-shadow: 0 2px 5x rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
 }
 
@@ -154,7 +154,6 @@ body.dark-mode .nav-links a {
     color:white;
 }
 
-<<<<<<< HEAD
 .cont {
     background-image: url('.vscode/fotopatocontacto1.jpg');
     width: 100%;
@@ -170,13 +169,6 @@ body.dark-mode .nav-links a {
 }
 
 
-=======
-.login-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
->>>>>>> 520c13ad2e1b196d9ee2cb7b07f69c0770db5654
 
 
 
