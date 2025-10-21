@@ -104,10 +104,23 @@ body.dark-mode .carta {
 }
 
 .carta-contenedor {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: stretch;
 }
+
+@media (min-width: 768px) {
+    .carta-contenedor {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
+}
+
+
+
+
 
 header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -218,19 +231,6 @@ body.dark-mode textarea {
     resize: vertical;
 }
 
-@media screen and (max-width: 430px) {
-    nav {
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 1rem;
-        gap: 1rem;
-    }
-}
 
 @media (max-width: 768px) {
     nav {
