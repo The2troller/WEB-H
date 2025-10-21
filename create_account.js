@@ -54,6 +54,8 @@ onAuthStateChanged(auth, (user) => {
 
     if (window.location.pathname.includes("login.html") || window.location.pathname.includes("create-account.html")) {
       window.location.href = "profile.html";
+      const email_displayed = document.getElementById("display-mail");
+      email_displayed.textContent = user.email;
     }
 
   } else {
@@ -62,8 +64,6 @@ onAuthStateChanged(auth, (user) => {
 
     if (window.location.pathname.includes("profile.html")) {
       window.location.href = "login.html";
-      const email_displayed = document.getElementById("display-mail");
-      email_displayed.textContent = user.email;
     }
   }
 });
